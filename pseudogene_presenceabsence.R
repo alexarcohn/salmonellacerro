@@ -1,0 +1,5 @@
+pseudo <- read.csv("~/Documents/Cerro Host Adaptation/Pseudogenes/cerropseudo.csv")
+install.packages("reshape2")
+library(reshape2)
+test<-dcast(pseudo, annotation~genome, length)
+write_csv(test, "~/Documents/Cerro Host Adaptation/Manuscript/Supplemental File 3.csv")
